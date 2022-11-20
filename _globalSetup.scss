@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap');
+
+// var
+$textWithShadowColor: #0D0D0D;
+$textColor: #9453A6;
+$textSize: 1.3rem;
+$headSize: 2em;
+$headColor: #8CBF3F;
+$headMainColor: #f2cc0f;
+$bgcColor: #f2f2f2;
+$baseWidth: 100vw;
+$basefontText: Roboto;
+$basefontHead: Pattaya;
+
+//*Mixing media queries*/
+@mixin destop {
+    @media (max-width:1600px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (max-width:800px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width:600px) {
+        @content
+    }
+}
+
+
+body {
+    background-image: url('img/bgc.webp');
+    opacity: 0.9;
+    width: 100vw;
+}
+
+.nav-link:hover {
+    // background-color: #999;
+    text-shadow: 2px 1px 10px $bgcColor;
+    color: $textColor;
+
+}
+
+.nav-link {
+    color: $bgcColor;
+}
+
+
+.smallLogo {
+    height: 50px;
+    width: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.fontHackerUTitle {
+    font-family: $basefontHead;
+}
+
+.fontHackerU {
+    font-family: $basefontText;
+}
+
+p {
+    color: $bgcColor;
+    font-family: $basefontText;
+}
+
+.smallSocialIcon {
+    width: 5vw;
+
+    @include destop {
+        width: 15px;
+    }
+
+    @include tablet() {
+        width: 5vw;
+    }
+
+    @include mobile() {
+        width: 5vw;
+    }
+}
+
+.shadow,
+h1,
+h2 {
+    text-shadow: 2px 1px 10px $textWithShadowColor;
+    color: $headMainColor;
+}
+
+
+
+.centerPcRightMobile {
+    display: flex;
+
+    @include destop {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    @include tablet {
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+    @include mobile {
+        align-items: flex-start;
+        justify-content: left;
+    }
+}
+
+.displayOnlyInPc {
+    display: block;
+
+    @include destop {
+        display: block;
+
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+
+        visibility: hidden;
+        display: none;
+
+    }
+}
+
+.displayOnlyInMobile {
+    display: none;
+
+    @include destop {
+        display: none;
+    }
+
+    @include tablet {
+        display: block;
+    }
+
+    @include mobile {
+        display: block;
+    }
+}

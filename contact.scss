@@ -1,0 +1,312 @@
+// Import all to main
+@import "globalSetup";
+
+.lineText {
+    font-family: $basefontHead;
+}
+
+textarea {
+    width: 350px;
+    height: 200px;
+    resize: none;
+}
+
+.centerItem {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadowWhite {
+    text-shadow: 5px 3px 30px $textColor;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-outline-danger {
+    border: 1px solid $textColor;
+    font-size: 1rem;
+    font-family: $basefontHead;
+    color: $bgcColor;
+    cursor: pointer;
+}
+
+.btn-outline-danger:hover {
+    border: 1px solid $bgcColor;
+    background-color: $textColor;
+    text-shadow: 2px 1px 10px $headMainColor;
+    color: $textWithShadowColor;
+}
+
+
+
+// Round
+.details {
+
+
+    a:link {
+        text-decoration: none;
+        color: $headMainColor ;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: $headMainColor ;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: $headMainColor ;
+    }
+
+    a:active {
+        text-decoration: underline;
+        color: $headMainColor ;
+    }
+}
+
+
+
+// Forms
+.bgcContac {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+
+    --size-bezel: 0.8rem;
+    --size-radius: 2px;
+
+    line-height: 1.4;
+
+    // font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0 auto;
+}
+
+
+mark {
+    background: var(--color-accent);
+    color: var(--color-text);
+    font-weight: bold;
+    padding: 0 0.2em;
+}
+
+.card {
+    background: var(--color-background);
+    padding: calc(4 * var(--size-bezel));
+    margin-top: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+
+    &--inverted {
+        --color-background: var(--color-dark);
+        color: var(--color-light);
+        --color-shadow: var(--color-accent);
+    }
+
+    &--accent {
+        --color-background: var(--color-signal);
+        --color-accent: var(--color-light);
+        color: var(--color-dark);
+    }
+
+    *:first-child {
+        margin-top: 0;
+    }
+}
+
+
+.l-design-widht {
+    max-width: 40rem;
+    padding: 1rem;
+}
+
+.input {
+    position: relative;
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+        margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+        background: pink;
+        white-space: nowrap;
+        transform: translate(0, 0);
+        transform-origin: 0 0;
+        background: var(--color-background);
+        transition: transform 120ms ease-in;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    &__field {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: 3px solid currentColor;
+        padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+        color: currentColor;
+        background: transparent;
+        border-radius: var(--size-radius);
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            &+.input__label {
+                transform: translate(.25rem, -65%) scale(.8);
+                color: var(--color-accent);
+            }
+        }
+    }
+}
+
+
+.button-group {
+    margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+.myButton {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--size-radius);
+    font-weight: 700;
+
+    &[type=reset] {
+        background: var(--color-background);
+        font-weight: 200;
+    }
+}
+
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+}
+
+.hidden {
+    display: none;
+}
+
+
+// bEta
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .content .left-side {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+.content .left-side::before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+}
+
+.content .left-side .details {
+    margin: 14px;
+    text-align: center;
+}
+
+.content .left-side .details i {
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.content .left-side .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .left-side .details .text-one,
+.content .left-side .details .text-two {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+.container .content .right-side {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.content .right-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+}
+
+.right-side .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.right-side .input-box input,
+.right-side .input-box textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+}
+
+.right-side .message-box {
+    min-height: 110px;
+}
+
+.right-side .input-box textarea {
+    padding-top: 6px;
+}
+
+.right-side .button {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.right-side .button input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #3e2093;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input[type="button"]:hover {
+    background: #5029bc;
+}
