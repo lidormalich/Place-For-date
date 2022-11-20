@@ -41,7 +41,8 @@ $basefontHead: Rubik;
 
 
 body {
-    background-image: url('img/bgc.webp');
+    //*background-image: url('img/bgc.webp');*/
+    background-color: $textColor;
     opacity: 0.9;
     width: 100vw;
 }
