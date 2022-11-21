@@ -14,8 +14,7 @@ body {
 }
 
 .nav-link:hover {
-  text-shadow: 2px 1px 10px #c29a3f;
-  color: #cbb2ff;
+  text-shadow: 2px 1px 10px #275DAD;
 }
 
 .nav-link {
@@ -32,9 +31,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.fontHackerUTitle {
+h6 {
   font-family: Rubik;
+  font-weight: 600;
 }
 
 .fontHackerU {
@@ -68,8 +67,8 @@ p {
 .shadow,
 h1,
 h2 {
-  text-shadow: 2px 1px 10px #0D0D0D;
-  color: #ffb2d7;
+  text-shadow: 2px 1px 10px #275DAD;
+  color: #ffb;
 }
 
 .centerPcRightMobile {
@@ -86,13 +85,13 @@ h2 {
 @media (max-width: 800px) {
   .centerPcRightMobile {
     align-items: flex-start;
-    justify-content: left;
+    justify-content: right;
   }
 }
 @media (max-width: 600px) {
   .centerPcRightMobile {
     align-items: flex-start;
-    justify-content: left;
+    justify-content: right;
   }
 }
 
@@ -138,9 +137,7 @@ h2 {
 
 .addloveicon li {
   padding-left: 1.3em;
-  list-style: none;
-}
-
-.addloveicon li:before {
-  content: "❤";
+  padding-right: 0.3em;
+  list-style-type: "♡";
+  list-style: "♡";
 }/*# sourceMappingURL=search.css.map */

@@ -9,7 +9,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 // var
-$textWithShadowColor: #0D0D0D;
+// $textWithShadowColor: #0D0D0D;
+$textWithShadowColor: #275DAD;
+// $shadowColor: #A14A76;
 
 $textSize: 1.3rem;
 $headSize: 2em;
@@ -19,11 +21,13 @@ $headSize: 2em;
 // $bgcColor: #ffb2d7;
 $headColor: #c29a3f;
 $textColor: #cbb2ff;
-$headMainColor: #ffb2d7;
+$headMainColor: #ffb;
+// $headMainColor: #ffb2d7;
 $bgcColor: #c29a3f;
 $baseWidth: 100vw;
 $basefontText: Varela;
 $basefontHead: Rubik;
+$bold: 600;
 
 
 
@@ -57,8 +61,9 @@ body {
 
 .nav-link:hover {
     // background-color: #999;
-    text-shadow: 2px 1px 10px $bgcColor;
-    color: $textColor;
+    // color: $textColor;
+    text-shadow: 2px 1px 10px $textWithShadowColor;
+
 
 }
 
@@ -77,9 +82,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.fontHackerUTitle {
+h6 {
     font-family: $basefontHead;
+    font-weight: $bold;
 }
 
 .fontHackerU {
@@ -129,12 +134,12 @@ h2 {
 
     @include tablet {
         align-items: flex-start;
-        justify-content: left;
+        justify-content: right;
     }
 
     @include mobile {
         align-items: flex-start;
-        justify-content: left;
+        justify-content: right;
     }
 }
 

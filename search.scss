@@ -3,9 +3,9 @@
 
 .addloveicon li {
     padding-left: 1.3em;
-    list-style: none;
-}
-
-.addloveicon li:before {
-    content: "❤";
+    padding-right: .3em;
+    list-style-type: '♡';
+    list-style: '♡';
+    // color: red;
+    // [18: 01, 21.11.2022] Lidor Malich: ♡ [18:01, 21.11.2022] Lidor Malich: ♧
 }
