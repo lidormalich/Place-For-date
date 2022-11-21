@@ -1,0 +1,11 @@
+// Import all to main
+@import "globalSetup";
+
+.addloveicon li {
+    padding-left: 1.3em;
+    list-style: none;
+}
+
+.addloveicon li:before {
+    content: "❤";
+}

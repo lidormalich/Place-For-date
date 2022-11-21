@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,800;0,900;1,300;1,400;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,18 +7,18 @@
 }
 
 body {
-  background-color: #9453A6;
+  background-color: #cbb2ff;
   opacity: 0.9;
   width: 100vw;
 }
 
 .nav-link:hover {
-  text-shadow: 2px 1px 10px #f2f2f2;
-  color: #9453A6;
+  text-shadow: 2px 1px 10px #c29a3f;
+  color: #cbb2ff;
 }
 
 .nav-link {
-  color: #f2f2f2;
+  color: #c29a3f;
 }
 
 .smallLogo {
@@ -36,12 +37,12 @@ h6,
 }
 
 .fontHackerU {
-  font-family: Rubik;
+  font-family: Varela;
 }
 
 p {
-  color: #f2f2f2;
-  font-family: Rubik;
+  color: #c29a3f;
+  font-family: Varela;
 }
 
 .smallSocialIcon {
@@ -67,7 +68,7 @@ p {
 h1,
 h2 {
   text-shadow: 2px 1px 10px #0D0D0D;
-  color: #f2cc0f;
+  color: #ffb2d7;
 }
 
 .centerPcRightMobile {
@@ -140,30 +141,30 @@ h2 {
 }
 
 .bgc-popup {
-  background-color: #9453A6;
+  background-color: #cbb2ff;
 }
 
 .btn-primary {
-  background-color: #9453A6;
-  border: 1px solid #9453A6;
+  background-color: #cbb2ff;
+  border: 1px solid #cbb2ff;
 }
 .btn-primary:hover {
-  background-color: #9453A6;
-  border: 1px solid #9453A6;
+  background-color: #cbb2ff;
+  border: 1px solid #cbb2ff;
 }
 
 .btn-secondary {
-  background-color: #8CBF3F;
+  background-color: #c29a3f;
   color: #0D0D0D;
-  border: 1px solid #9453A6;
+  border: 1px solid #cbb2ff;
 }
 .btn-secondary:hover {
-  background-color: #8CBF3F;
-  border: 1px solid #9453A6;
+  background-color: #c29a3f;
+  border: 1px solid #cbb2ff;
 }
 
 .modal-body {
-  font-family: Rubik;
+  font-family: Varela;
 }
 
 .floatLeft {
@@ -272,7 +273,7 @@ h2 {
   border: solid 3px rgba(255, 255, 255, 0.3);
 }
 .card .card-meta {
-  color: #f2f2f2;
+  color: #c29a3f;
 }
 .card .card-body {
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
