@@ -12,6 +12,7 @@ let city = {
         "Friday",
         "Saturday",
     ],
+
     addCityToPage: function () {
         for (let cityItem of this.cityName) {
             document.getElementById("citySelect").innerHTML += `<option value=${cityItem}>${cityItem} </option>`;
@@ -39,9 +40,9 @@ area.addAreaToPage();
 
 
 function showProduct(itemId) {
-    // document.getElementById('exampleModalLabel').innerText = product[itemId].name;
-    // document.getElementById('exampleModalText').innerHTML = `<p><b>Description: </b> ${product[itemId].description} </p>`;
-    // document.querySelector('#exampleModalText').innerHTML += `<img src="${product[itemId].pic} height="200" width="300" alt="pic""><img>`; 
+    document.getElementById('exampleModalLabel').innerText = sliceData(JSON.stringify(data.table.rows[i].c[4]));
+    document.getElementById('exampleModalText').innerHTML = `<p><b>Description: </b> ${sliceData(JSON.stringify(data.table.rows[i].c[2]))} </p>`;
+    document.querySelector('#exampleModalText').innerHTML += `<img src="${product[itemId].pic} height="200" width="300" alt="pic""><img>`;
     console.log("Hare LOGO");
     document.querySelector('#exampleModalText').innerHTML += `<p><a href="${sliceData(JSON.stringify(data.table.rows[itemId].c[0]))}" class="btn btn-secondary"> Web page</a></p> `;
 
@@ -71,11 +72,14 @@ function showStudentsCard() {
                                     <p class="card-text">4: ${sliceData(JSON.stringify(data.table.rows[i].c[4]))}</p> 
                                     <p class="card-text">5: ${sliceData(JSON.stringify(data.table.rows[i].c[5]))}</p> 
                                     <p class="card-text">0: ${sliceData(JSON.stringify(data.table.rows[i].c[0]))}</p> 
- 
-                                    
                                     <a href="" class="btn btn-primary" onclick="showProduct(${i})">נשמע דייט מעולה, תראו פרטים</a>
                                 </div>
                                 </div> `;
+                let city2 = "";
+                city2 = sliceData(JSON.stringify(data.table.rows[i].c[5]));
+
+                city[i + 1] = city2;
+                console.log(city2);
 
             }
         })

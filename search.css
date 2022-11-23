@@ -140,4 +140,14 @@ h2 {
   padding-right: 0.3em;
   list-style-type: "♡";
   list-style: "♡";
+}
+
+.btn-primary {
+  color: #cbb2ff;
+  background-color: #ffb;
+}
+
+.btn-primary:hover {
+  color: #ffb;
+  background-color: #cbb2ff;
 }/*# sourceMappingURL=search.css.map */

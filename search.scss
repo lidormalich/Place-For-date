@@ -9,3 +9,13 @@
     // color: red;
     // [18: 01, 21.11.2022] Lidor Malich: ♡ [18:01, 21.11.2022] Lidor Malich: ♧
 }
+
+.btn-primary {
+    color: $textColor ;
+    background-color: $headMainColor;
+}
+
+.btn-primary:hover {
+    color: $headMainColor;
+    background-color: $textColor;
+}
