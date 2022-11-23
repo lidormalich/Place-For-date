@@ -63,10 +63,13 @@ function showStudentsCard() {
             let colLenght = data.table.cols.length;
             for (let i = 0; i < rowLenght; i++) {
                 document.getElementById("cardDive").innerHTML += `<div class="card col-sm-12 col-md-4 col-lg-3 mb-2 mx-auto" style="width: 18rem;">    
+                
+
+
                                 <div class="card-body">
                                     <h5 class="card-title">${sliceData(JSON.stringify(data.table.rows[i].c[4]))}</h5>
                                     <img src="img/gmap.png"  class="card-img-top" alt="...">
-                                    <p class="card-text">1: ${sliceData(JSON.stringify(data.table.rows[i].c[1]))}</p> 
+                                    <a href='${sliceData(JSON.stringify(data.table.rows[i].c[1]))}' class="card-text text-center">נווט בעזרת Google Map</a> 
                                     <p class="card-text">2: ${sliceData(JSON.stringify(data.table.rows[i].c[2]))}</p> 
                                     <p class="card-text">3: ${sliceData(JSON.stringify(data.table.rows[i].c[3]))}</p> 
                                     <p class="card-text">4: ${sliceData(JSON.stringify(data.table.rows[i].c[4]))}</p> 
