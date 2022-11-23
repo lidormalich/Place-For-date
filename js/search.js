@@ -38,65 +38,59 @@ let area = {
 area.addAreaToPage();
 
 
-
-
-let product = [
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/Walk-Ons.jpg?raw=true",
-        name: "Walk-On's Bistreaux and Bar",
-        web: "https://walk-ons.com/",
-        description: "Grab a bite with your family at Walk On's Restaurant and Sports Bistreaux. Check out our menu of burgers, sandwiches, salads & Cajun cuisine.",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/SheratonNewOrleansHotel.jpg?raw=true",
-        // pic: "../img/SheratonNewOrleansHotel.jpg",
-        name: "Sheraton New Orleans Hotel",
-        web: "https://www.marriott.com/en-us/hotels/msyis-sheraton-new-orleans-hotel/overview/",
-        description: "Sheraton New Orleans Hotel offers two restaurants and a bar, a 24-hour fitness center, rooftop pool, expansive meeting space, amazing downtown and river ...",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/ace-hotel-new-orleans2.jpg?raw=true",
-        name: "Ace Hotel New Orleans",
-        web: "https://acehotel.com/new-orleans/?gclid=EAIaIQobChMI_Lz-zq6r-wIVlt1RCh1t_wT4EAAYASAAEgIhcPD_BwE",
-        description: "Home to well-appointed rooms, event spaces, a restaurant, rooftop bar and all-day café. Well-appointed rooms with breathing room. Custom furnishings, original art and more. Warehouse District. Near the French Quarter. By South Market...",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/TheRitzCarltonNewOrleans.jpg?raw=true",
-        name: "The Ritz-Carlton, New Orleans",
-        web: "https://www.ritzcarlton.com/en/hotels/new-orleans",
-        description: "The Ritz-Carlton, New Orleans in the French Quarter offers luxury hotel amenities including a spa, large rooms and a lounge with live jazz.",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/PremiumParking.jpg?raw=true",
-        name: "Premium Parking - P402",
-        web: "https://www.premiumparking.com/P402",
-        description: "Less than half a mile from the French Quarter, 300 N Peters St Parking New Orleans is an affordable and convenient option for downtown parking. This 24x7 outdoor self-parking facility guarantees maximum safety and the lowest 300 N Peters St Parking charges for online bookings. 300 N Peters St Parking lots are ideal for those attending events at the City Park, Fair Grounds Race Course & Slots, Smoothie King Center, or Caesars Superdome.",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/LouisianaChildrenMuseum.jpg?raw=true",
-        name: "Louisiana Children's Museum",
-        web: "https://lcm.org/",
-        description: "The Museum was meticulously designed to be a social, cultural and learning resource for children and families. Indoors and out, there are tons of hands-on ways ...",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/museum-of-death.jpg?raw=true",
-        name: "Museum of Death",
-        web: "http://www.museumofdeath.net/",
-        description: "The world-famous Museum of Death is located in New Orleans' French Quarter. Those brave enough to visit can view and learn more about body bags, coffins, ...",
-    },
-    {
-        pic: "https://github.com/lidormalich/Mardi-Gras/blob/main/img/HauntedMuseum2.jpg?raw=true",
-        name: "Haunted Museum",
-        description: "Join us for a spirited adventure through Zak Bagans' The Haunted Museum in Las Vegas, as seen on the Travel Channel's Ghost Adventures!",
-        web: "https://thehauntedmuseum.com/",
-    },
-
-];
-
-
 function showProduct(itemId) {
-    document.getElementById('exampleModalLabel').innerText = product[itemId].name;
-    document.getElementById('exampleModalText').innerHTML = `<p><b>Description: </b> ${product[itemId].description} </p>`;
-    document.querySelector('#exampleModalText').innerHTML += `<img src="${product[itemId].pic} height="200" width="300" alt="pic""><img>`; document.querySelector('#exampleModalText').innerHTML += `<p><a href="${product[itemId].web}" class="btn btn-secondary"> Web page</a></p> `;
+    // document.getElementById('exampleModalLabel').innerText = product[itemId].name;
+    // document.getElementById('exampleModalText').innerHTML = `<p><b>Description: </b> ${product[itemId].description} </p>`;
+    // document.querySelector('#exampleModalText').innerHTML += `<img src="${product[itemId].pic} height="200" width="300" alt="pic""><img>`; 
+    console.log("Hare LOGO");
+    document.querySelector('#exampleModalText').innerHTML += `<p><a href="${sliceData(JSON.stringify(data.table.rows[itemId].c[0]))}" class="btn btn-secondary"> Web page</a></p> `;
 
 }
+
+// Make Cards with google Sheets
+function showStudentsCard() {
+    // do info from google sheets
+    const base = 'https://docs.google.com/spreadsheets/d/1tibUdKtvqfZPKQJt8tcxC-wLLfdEbwHiieXBbfYEa-Q/gviz/tq?';
+    const output = document.querySelector('.output');
+    const query = encodeURIComponent('Select B,C,D,E,F,G');
+    const url = base + '&tq=' + query;
+    fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            let rowLenght = data.table.rows.length;
+            let colLenght = data.table.cols.length;
+            for (let i = 0; i < rowLenght; i++) {
+                document.getElementById("cardDive").innerHTML += `<div class="card col-sm-12 col-md-4 col-lg-3 mb-2 mx-auto" style="width: 18rem;">    
+                                <div class="card-body">
+                                    <h5 class="card-title">${sliceData(JSON.stringify(data.table.rows[i].c[4]))}</h5>
+                                    <img src="img/gmap.png"  class="card-img-top" alt="...">
+                                    <p class="card-text">1: ${sliceData(JSON.stringify(data.table.rows[i].c[1]))}</p> 
+                                    <p class="card-text">2: ${sliceData(JSON.stringify(data.table.rows[i].c[2]))}</p> 
+                                    <p class="card-text">3: ${sliceData(JSON.stringify(data.table.rows[i].c[3]))}</p> 
+                                    <p class="card-text">4: ${sliceData(JSON.stringify(data.table.rows[i].c[4]))}</p> 
+                                    <p class="card-text">5: ${sliceData(JSON.stringify(data.table.rows[i].c[5]))}</p> 
+                                    <p class="card-text">0: ${sliceData(JSON.stringify(data.table.rows[i].c[0]))}</p> 
+ 
+                                    
+                                    <a href="" class="btn btn-primary" onclick="showProduct(${i})">נשמע דייט מעולה, תראו פרטים</a>
+                                </div>
+                                </div> `;
+
+            }
+        })
+
+    function sliceData(str) {
+        let strNew = str.slice(6);
+        strNew = strNew.slice(0, -2);
+        return strNew;
+    }
+}
+showStudentsCard();
+// 1 לינק
+// 2תאור
+// 3תגיות
+// 4 כותרת == כותרת
+// 5 עיר
+// 0 אזור
+
