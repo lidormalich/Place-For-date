@@ -1,12 +1,27 @@
 // Import all to main
 @import "globalSetup";
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
 
-.imgRes {
+$textIndexColor: #8F3985;
+$mainText: Alef;
+$bold: 700;
+$regular: 400;
 
-    width: 85vw;
-    height: auto;
+.addloveicon li {
+    padding-left: 1.3em;
+    padding-right: .3em;
+    list-style-type: '❤';
+    list-style: '❤';
+    color: $textIndexColor ;
+    font-family: $basefontText;
+    font-weight: $bold;
 
+}
 
+p {
+    font-family: $mainText;
+    font-weight: $bold;
+    color: $textIndexColor ;
 }
 
 .bgc-popup {
