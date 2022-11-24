@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,800;0,900;1,300;1,400;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -150,4 +153,51 @@ h2 {
 .btn-primary:hover {
   color: #ffb;
   background-color: #cbb2ff;
+}
+
+.card-title {
+  color: #8F3985;
+  text-align: center;
+}
+
+.card-text {
+  font-family: Bellefair;
+  color: #656264;
+}
+
+.text-center {
+  font-family: Bellefair;
+  color: #656264;
+}
+
+.cityFont {
+  font-family: Heebo;
+  color: #56445d;
+  text-align: left;
+}
+
+.leftSide {
+  text-align: right;
+}
+
+.redLink {
+  color: red;
+  text-align: center;
+}
+.redLink:hover {
+  color: #ffb;
+}
+
+.card {
+  background-color: #e5d8ff;
+}
+
+.smallImagCrad {
+  height: 40px;
+  width: 40px;
+}
+
+.btn-primary {
+  background-color: #e5d8ff;
+  color: #8F3985;
 }/*# sourceMappingURL=search.css.map */

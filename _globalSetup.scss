@@ -7,6 +7,9 @@
 // font
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,800;0,900;1,300;1,400;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
 // var
 // $textWithShadowColor: #0D0D0D;
@@ -15,18 +18,25 @@ $textWithShadowColor: #275DAD;
 
 $textSize: 1.3rem;
 $headSize: 2em;
+
 // $headColor: #ff819f;
 // $textColor: #cbb2ff;
 // $headMainColor: #fea0ff;
 // $bgcColor: #ffb2d7;
+$smallColor: #56445d;
+
 $headColor: #c29a3f;
 $textColor: #cbb2ff;
 $headMainColor: #ffb;
-// $headMainColor: #ffb2d7;
+
 $bgcColor: #c29a3f;
+$textCard: #656264;
+
 $baseWidth: 100vw;
 $basefontText: Varela;
 $basefontHead: Rubik;
+$basefontCardText: Bellefair;
+$basefontCardCity: Heebo;
 $bold: 600;
 
 
