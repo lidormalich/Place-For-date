@@ -47,6 +47,10 @@ p {
   font-family: Varela;
 }
 
+.center {
+  text-align: center;
+}
+
 .smallSocialIcon {
   width: 5vw;
 }

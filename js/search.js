@@ -87,7 +87,7 @@ function showStudentsCard() {
                                     
                                     <img src="img/gmap.png"  class="card-img-top" alt="...">
                                     <a href='${sliceData(JSON.stringify(data.table.rows[i].c[1]))}' class="card-text justify-content center align-items center redLink">♡ נווט בעזרת Google Map ♡</a> 
-                                    <p class="card-text">כמה מילים על המקום: ${someKnow.substring(0, 200)}</p> 
+                                    <p class="card-text">כמה מילים על המקום: ${someKnow.substring(0, 200) + "..."}</p> 
 
 
                                     <p class="card-text">תגיות: ${sliceData(JSON.stringify(data.table.rows[i].c[3]))}</p> 

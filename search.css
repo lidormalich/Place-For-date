@@ -48,6 +48,10 @@ p {
   font-family: Varela;
 }
 
+.center {
+  text-align: center;
+}
+
 .smallSocialIcon {
   width: 5vw;
 }
@@ -186,10 +190,6 @@ h2 {
 }
 .redLink:hover {
   color: #ffb;
-}
-
-.center {
-  text-align: center;
 }
 
 .card {
