@@ -63,6 +63,9 @@ function showStudentsCard() {
             let colLenght = data.table.cols.length;
             for (let i = 0; i < rowLenght; i++) {
                 let someKnow = sliceData(JSON.stringify(data.table.rows[i].c[2]));
+                someKnow.replace('\"', "''");
+
+                // someKnow.replace('\');
                 document.getElementById("cardDive").innerHTML += `<div class="card col-sm-12 col-md-4 col-lg-3 mb-2 mx-auto" style="width: 18rem;"> 
                                 <div class="card-body"><h5 class="card-title">${sliceData(JSON.stringify(data.table.rows[i].c[4]))}</h5>
                                 <div class="container">

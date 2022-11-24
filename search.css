@@ -188,6 +188,10 @@ h2 {
   color: #ffb;
 }
 
+.center {
+  text-align: center;
+}
+
 .card {
   background-color: #e5d8ff;
 }
