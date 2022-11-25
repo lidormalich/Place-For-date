@@ -142,6 +142,17 @@ h2 {
   }
 }
 
+@media (max-width: 800px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+@media (max-width: 600px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+
 .addloveicon li {
   padding-left: 1.3em;
   padding-right: 0.3em;

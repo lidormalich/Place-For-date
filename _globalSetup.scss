@@ -191,3 +191,18 @@ h2 {
         display: block;
     }
 }
+
+.nav-link {
+
+
+    @include destop {}
+
+    @include tablet {
+        text-align: right;
+    }
+
+    @include mobile {
+
+        text-align: right;
+    }
+}

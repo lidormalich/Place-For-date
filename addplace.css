@@ -141,6 +141,17 @@ h2 {
   }
 }
 
+@media (max-width: 800px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+@media (max-width: 600px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+
 .alignYoutubeCenter {
   display: flex;
   align-items: center;

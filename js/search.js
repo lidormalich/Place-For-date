@@ -49,7 +49,7 @@ function showProduct(itemId) {
 }
 
 // Make Cards with google Sheets
-function showStudentsCard() {
+function showSheetsCard() {
     // do info from google sheets
     const base = 'https://docs.google.com/spreadsheets/d/1tibUdKtvqfZPKQJt8tcxC-wLLfdEbwHiieXBbfYEa-Q/gviz/tq?';
     const output = document.querySelector('.output');
@@ -111,7 +111,7 @@ function showStudentsCard() {
         return strNew;
     }
 }
-showStudentsCard();
+showSheetsCard();
 // 1 לינק
 // 2תאור
 // 3תגיות
