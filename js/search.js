@@ -53,12 +53,13 @@ function showSheetsCard() {
     // do info from google sheets
     const base = 'https://docs.google.com/spreadsheets/d/1tibUdKtvqfZPKQJt8tcxC-wLLfdEbwHiieXBbfYEa-Q/gviz/tq?';
     const output = document.querySelector('.output');
-    const query = encodeURIComponent('Select B,C,D,E,F,G');
+    const query = encodeURIComponent('Select B,C,D,E,F,G,H,I');
     const url = base + '&tq=' + query;
     fetch(url)
         .then(res => res.text())
         .then(rep => {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
+            console.log(data);
             let rowLenght = data.table.rows.length;
             let colLenght = data.table.cols.length;
             for (let i = 0; i < rowLenght; i++) {
@@ -85,7 +86,7 @@ function showSheetsCard() {
                                     
                                     
                                     
-                                    <img src="img/gmap.png"  class="card-img-top" alt="...">
+                                    <img src='${sliceData(JSON.stringify(data.table.rows[i].c[7]))}'  class="card-img-top" alt="...">
                                     <a href='${sliceData(JSON.stringify(data.table.rows[i].c[1]))}' class="card-text justify-content center align-items center redLink">♡ נווט בעזרת Google Map ♡</a> 
                                     <p class="card-text">כמה מילים על המקום: ${someKnow.substring(0, 150) + "..."}</p> 
 
@@ -118,4 +119,6 @@ showSheetsCard();
 // 4 כותרת == כותרת
 // 5 עיר
 // 0 אזור
+// 7 איקון
+// 6 תמונה ראשית
 
