@@ -123,7 +123,7 @@ function showSheetsCard() {
                                     <p class="card-text"><u>כמה מילים על המקום:</u> ${someKnow.substring(0, 150) + "..."}</p> 
                                     <p class="card-text">תגיות: ${sliceData(JSON.stringify(dataTable[i].c[3]))}</p> 
                                     
-                                    <button type="button" class="btn btn-primary  mx-auto" onclick="showProduct(${i})" data-toggle="modal" data-target="#exampleModal">נשמע דייט מעולה, תראו פרטים</button>
+                                    <button type="button" class="btn btn-primary mx-auto " onclick="showProduct(${i})" data-toggle="modal" data-target="#exampleModal">נשמע דייט מעולה, תראו פרטים</button>
     
                                 </div>
                                 

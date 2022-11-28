@@ -220,6 +220,11 @@ h2 {
 .btn-primary {
   background-color: #e5d8ff;
   color: #8F3985;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.5rem;
+  height: 3.5rem;
+  max-width: 80%;
 }
 
 .dropdown {

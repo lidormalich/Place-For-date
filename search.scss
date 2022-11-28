@@ -83,6 +83,12 @@ $timing: .3s;
 .btn-primary {
     background-color: $cardBGC;
     color: $titleCard;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    // padding: 10px;
+    height: 3.5rem;
+    max-width: 80%;
 }
 
 // DROPDWON CODE
