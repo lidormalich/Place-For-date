@@ -7,14 +7,14 @@ let arryPlace = [{ city: "", value: "" }];
 
 
 function addCityToPage(cityName) {
-    document.getElementById("citySelect").innerHTML = `<option selected>בחר עיר </option>`;
+    document.getElementById("citySelect").innerHTML = `<option selected="selected">בחר עיר </option>`;
     // document.getElementById("citySelect").options.selectedIndex = 0;
     // console.log(document.getElementById("citySelect").selectedIndex);
     for (let cityItem of cityName) {
         document.getElementById("citySelect").innerHTML += `<option value=${cityItem}>${cityItem} </option>`;
 
     }
-    document.getElementById("citySelect").options.selectedIndex = 0;
+    // document.getElementById("citySelect").options.selectedIndex = 0;
     search();
 
 }
