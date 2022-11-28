@@ -215,4 +215,19 @@ h2 {
 .btn-primary {
   background-color: #e5d8ff;
   color: #8F3985;
+}
+
+.dropdown {
+  min-width: 12em;
+  position: relative;
+  display: inline-block;
+  min-height: 2em;
+  max-height: 2em;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  border: 0.06em solid transparent;
+  border-radius: 1em;
+  background-color: #f2ecff;
+  transition: 0.3s all ease-in-out;
 }/*# sourceMappingURL=search.css.map */

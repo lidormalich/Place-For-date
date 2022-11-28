@@ -47,11 +47,11 @@
             <h1 class=" shadow lineText center">מצאו את המקום המקסים הבא לדייט המופלא שלך &#x2764;</h1>
             <div class="d-flex flex-row bd-highlight mb-3 align-items-center">
                 <!-- ADD -->
-                <label for="citySelect" class="">בחר עיר</label><select name="days" class="" id="citySelect"
+                <label for="citySelect">בחר עיר</label><select name="days" class="dropdown" id="citySelect"
                     onchange="search()">
                 </select>
                 <label for="citySelect" class="" hidden>בחר אזור</label><select hidden name="days" id="areaSelect"
-                    class=""></select>
+                    class="dropdown"></select>
             </div>
             <!-- Bootstrap Modal == PopUp -->
             <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -71,10 +71,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
 
             <!-- cards -->
             <div id="cardDive" class="row">

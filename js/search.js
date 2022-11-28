@@ -7,14 +7,11 @@ let arryPlace = [{ city: "", value: "" }];
 
 
 function addCityToPage(cityName) {
-    document.getElementById("citySelect").innerHTML = `<option selected="selected">בחר עיר </option>`;
-    // document.getElementById("citySelect").options.selectedIndex = 0;
-    // console.log(document.getElementById("citySelect").selectedIndex);
+    document.getElementById("citySelect").innerHTML = `<option selected="selected">הצגת כל הערים</option>`;
     for (let cityItem of cityName) {
         document.getElementById("citySelect").innerHTML += `<option value=${cityItem}>${cityItem} </option>`;
 
     }
-    // document.getElementById("citySelect").options.selectedIndex = 0;
     search();
 
 }
@@ -28,7 +25,6 @@ let area = {
             document.getElementById("areaSelect").innerHTML += `<option value=${areaItem}>${areaItem} </option>`;
         }
     }
-
 };
 
 area.addAreaToPage();
@@ -165,4 +161,5 @@ showSheetsCard();
 // 0 אזור
 // 7 איקון
 // 6 תמונה ראשית
+
 

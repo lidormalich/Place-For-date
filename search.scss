@@ -1,0 +1,99 @@
+// Import all to main
+@import "globalSetup";
+$cardBGC: #e5d8ff;
+// $titleCard: #FFD0DD;
+$titleCard: #8F3985;
+
+// DropDown
+$color: #cbb2ff;
+$timing: .3s;
+
+
+.addloveicon li {
+    padding-left: 1.3em;
+    padding-right: .3em;
+    list-style-type: '♡';
+    list-style: '♡';
+    // color: red;
+    // [18: 01, 21.11.2022] Lidor Malich: ♡ [18:01, 21.11.2022] Lidor Malich: ♧
+}
+
+.btn-primary {
+    color: $textColor ;
+    background-color: $headMainColor;
+}
+
+.btn-primary:hover {
+    color: $headMainColor;
+    background-color: $textColor;
+}
+
+.card-title {
+    color: $titleCard;
+    text-align: center;
+}
+
+
+.card-text {
+    font-family: $basefontCardText;
+    color: $textCard;
+
+}
+
+.text-center {
+    font-family: $basefontCardText;
+    color: $textCard;
+
+}
+
+.cityFont {
+    font-family: $basefontCardCity;
+    color: $smallColor;
+    text-align: left;
+
+}
+
+.leftSide {
+    text-align: right;
+}
+
+.redLink {
+    color: red;
+    text-align: center;
+
+    &:hover {
+        color: $headMainColor;
+    }
+}
+
+
+
+.card {
+    background-color: $cardBGC;
+}
+
+.smallImagCrad {
+    height: 40px;
+    width: 40px;
+}
+
+.btn-primary {
+    background-color: $cardBGC;
+    color: $titleCard;
+}
+
+// DROPDWON CODE
+.dropdown {
+    min-width: 12em;
+    position: relative;
+    display: inline-block;
+    min-height: 2em;
+    max-height: 2em;
+    text-align: center;
+    white-space: nowrap;
+    outline: none;
+    border: .06em solid transparent;
+    border-radius: 1em;
+    background-color: mix($color, #fff, 25%);
+    transition: $timing all ease-in-out;
+}

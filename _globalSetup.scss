@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,800;0,900;1,300;1,400;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+// var
+$textWithShadowColor: #275DAD;
+
+$textSize: 1.3rem;
+$headSize: 2em;
+
+// $headColor: #ff819f;
+// $textColor: #cbb2ff;
+// $headMainColor: #fea0ff;
+// $bgcColor: #ffb2d7;
+$smallColor: #56445d;
+
+$headColor: #c29a3f;
+$textColor: #cbb2ff;
+$headMainColor: #ffb;
+
+$bgcColor: #c29a3f;
+$textCard: #656264;
+
+$baseWidth: 100vw;
+$basefontText: "Varela Round";
+$basefontHead: Rubik;
+$basefontCardText: Bellefair;
+$basefontCardCity: Heebo;
+$bold: 600;
+
+
+
+
+//*Mixing media queries*/
+@mixin destop {
+    @media (max-width:1600px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (max-width:800px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width:600px) {
+        @content
+    }
+}
+
+
+body {
+    //*background-image: url('img/bgc.webp');*/
+    background-color: $textColor;
+    opacity: 0.9;
+    width: 100vw;
+}
+
+.nav-link:hover {
+    // background-color: #999;
+    // color: $textColor;
+    text-shadow: 2px 1px 10px $textWithShadowColor;
+
+
+}
+
+.nav-link {
+    color: $bgcColor;
+}
+
+
+.smallLogo {
+    height: 50px;
+    width: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $basefontHead;
+    font-weight: $bold;
+}
+
+.fontHackerU {
+    font-family: $basefontText;
+}
+
+p {
+    color: $bgcColor;
+    font-family: $basefontText;
+}
+
+.center {
+    text-align: center;
+}
+
+.smallSocialIcon {
+    width: 5vw;
+
+    @include destop {
+        width: 15px;
+    }
+
+    @include tablet() {
+        width: 5vw;
+    }
+
+    @include mobile() {
+        width: 5vw;
+    }
+}
+
+.shadow,
+h1,
+h2 {
+    text-shadow: 2px 1px 10px $textWithShadowColor;
+    color: $headMainColor;
+}
+
+
+
+.centerPcRightMobile {
+    display: flex;
+
+    @include destop {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    @include tablet {
+        align-items: flex-start;
+        justify-content: right;
+    }
+
+    @include mobile {
+        align-items: flex-start;
+        justify-content: right;
+    }
+}
+
+.displayOnlyInPc {
+    display: block;
+
+    @include destop {
+        display: block;
+
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+
+        visibility: hidden;
+        display: none;
+
+    }
+}
+
+.displayOnlyInMobile {
+    display: none;
+
+    @include destop {
+        display: none;
+    }
+
+    @include tablet {
+        display: block;
+    }
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.nav-link {
+
+
+    @include destop {}
+
+    @include tablet {
+        text-align: right;
+    }
+
+    @include mobile {
+
+        text-align: right;
+    }
+}
