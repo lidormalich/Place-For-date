@@ -61,15 +61,12 @@ $bold: 600;
 
 
 body {
-    //*background-image: url('img/bgc.webp');*/
     background-color: $textColor;
     opacity: 0.9;
     width: 100vw;
 }
 
 .nav-link:hover {
-    // background-color: #999;
-    // color: $textColor;
     text-shadow: 2px 1px 10px $textWithShadowColor;
 
 
@@ -77,12 +74,14 @@ body {
 
 .nav-link {
     color: $bgcColor;
+    font-size: 1rem;
+    // font-weight: bold;
 }
 
 
 .smallLogo {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
 
 h1,

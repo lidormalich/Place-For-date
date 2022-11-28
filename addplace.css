@@ -21,11 +21,12 @@ body {
 
 .nav-link {
   color: #c29a3f;
+  font-size: 1rem;
 }
 
 .smallLogo {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 h1,

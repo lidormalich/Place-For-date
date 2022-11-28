@@ -119,8 +119,8 @@ function showSheetsCard() {
                                 </div>
                                 </div> 
                                     <img src='${logo}'  class="card-img-top" alt="...">
-                                    <a href='${sliceData(JSON.stringify(dataTable[i].c[1]))}' class="card-text justify-content center align-items center redLink">♡ נווט בעזרת Google Map ♡</a> 
-                                    <p class="card-text">כמה מילים על המקום: ${someKnow.substring(0, 150) + "..."}</p> 
+                                    <a href='${sliceData(JSON.stringify(dataTable[i].c[1]))}' target="_blank" class="card-text justify-content center align-items center redLink">♡ נווטו בעזרת Google Map ♡</a> 
+                                    <p class="card-text"><u>כמה מילים על המקום:</u> ${someKnow.substring(0, 150) + "..."}</p> 
                                     <p class="card-text">תגיות: ${sliceData(JSON.stringify(dataTable[i].c[3]))}</p> 
                                     
                                     <button type="button" class="btn btn-primary  mx-auto" onclick="showProduct(${i})" data-toggle="modal" data-target="#exampleModal">נשמע דייט מעולה, תראו פרטים</button>
