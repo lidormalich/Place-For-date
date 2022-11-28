@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,800;0,900;1,300;1,400;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cbb2ff;
+  opacity: 0.9;
+  width: 100vw;
+}
+
+.nav-link:hover {
+  text-shadow: 2px 1px 10px #275DAD;
+}
+
+.nav-link {
+  color: #c29a3f;
+}
+
+.smallLogo {
+  height: 50px;
+  width: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Rubik;
+  font-weight: 600;
+}
+
+.fontHackerU {
+  font-family: "Varela Round";
+}
+
+p {
+  color: #c29a3f;
+  font-family: "Varela Round";
+}
+
+.center {
+  text-align: center;
+}
+
+.smallSocialIcon {
+  width: 5vw;
+}
+@media (max-width: 1600px) {
+  .smallSocialIcon {
+    width: 15px;
+  }
+}
+@media (max-width: 800px) {
+  .smallSocialIcon {
+    width: 5vw;
+  }
+}
+@media (max-width: 600px) {
+  .smallSocialIcon {
+    width: 5vw;
+  }
+}
+
+.shadow,
+h1,
+h2 {
+  text-shadow: 2px 1px 10px #275DAD;
+  color: #ffb;
+}
+
+.centerPcRightMobile {
+  display: flex;
+}
+@media (max-width: 1600px) {
+  .centerPcRightMobile {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .centerPcRightMobile {
+    align-items: flex-start;
+    justify-content: right;
+  }
+}
+@media (max-width: 600px) {
+  .centerPcRightMobile {
+    align-items: flex-start;
+    justify-content: right;
+  }
+}
+
+.displayOnlyInPc {
+  display: block;
+}
+@media (max-width: 1600px) {
+  .displayOnlyInPc {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  .displayOnlyInPc {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .displayOnlyInPc {
+    display: none;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.displayOnlyInMobile {
+  display: none;
+}
+@media (max-width: 1600px) {
+  .displayOnlyInMobile {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .displayOnlyInMobile {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .displayOnlyInMobile {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+@media (max-width: 600px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+
+.alignYoutubeCenter {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.pic_center {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}/*# sourceMappingURL=addplace.css.map */
