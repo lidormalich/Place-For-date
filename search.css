@@ -176,6 +176,11 @@ h2 {
   text-align: center;
 }
 
+.modal-title {
+  color: #8F3985;
+  text-align: center;
+}
+
 .card-text {
   font-family: Bellefair;
   color: #656264;

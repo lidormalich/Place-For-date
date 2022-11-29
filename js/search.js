@@ -57,7 +57,7 @@ function addCard(index) {
 
 
 function showProduct(index) {
-    console.log("5555555555 Hare");
+    // console.log("5555555555 Hare");
     // 1 לינק
     // 2תאור
     // 3תגיות
@@ -68,14 +68,16 @@ function showProduct(index) {
     // 6 תמונה ראשית
     let title = sliceData(JSON.stringify(dataTable[index].c[4]));
     let description = sliceData(JSON.stringify(dataTable[index].c[2]));
-    let logo = sliceData(JSON.stringify(dataTable[index].c[6]));
-    // document.getElementById('exampleModalLabel').innerText = sliceData(JSON.stringify(data.table.rows[itemId].c[4]));
+    let logo = sliceData(JSON.stringify(dataTable[index].c[7]));
+    let link = sliceData(JSON.stringify(dataTable[index].c[1]));
+
+
     document.getElementById('exampleModalLabel').innerText = title;
-    // document.getElementById('exampleModalText').innerHTML = `<p><b>Description: </b> ${sliceData(JSON.stringify(data.table.rows[itemId].c[2]))} </p>`;
-    document.getElementById('exampleModalText').innerHTML = `<p><b>Description: </b> ${description} </p>`;
-    // document.querySelector('#exampleModalText').innerHTML += `<img src="${logo} height="200" width="300" alt="pic""><img>`;
-    console.log("Hare LOGO");
-    document.querySelector('#exampleModalText').innerHTML += `<p><a href="${sliceData(JSON.stringify(dataTable[index].c[0]))}" class="btn btn-secondary"> Web page</a></p> `;
+
+    document.querySelector('#exampleModalText').innerHTML = ` <img src='${logo}'  height="200" width="300" alt="pic" class="card-img-top">`;
+    document.getElementById('exampleModalText').innerHTML += `<p><b>תאור המקום: </b> ${description} </p>`;
+    document.getElementById('exampleModalText').innerHTML += `<p><b>תגיות : </b> ${sliceData(JSON.stringify(dataTable[index].c[3]))} </p>`;
+    document.querySelector('#exampleModalText').innerHTML += `<p><a href="${link}" target="_blank" class="btn btn-secondary">♡ נווטו בעזרת Google Map ♡</a></p> `;
 
 }
 
@@ -120,10 +122,9 @@ function showSheetsCard() {
                                 </div> 
                                     <img src='${logo}'  class="card-img-top" alt="...">
                                     <a href='${sliceData(JSON.stringify(dataTable[i].c[1]))}' target="_blank" class="card-text justify-content center align-items center redLink">♡ נווטו בעזרת Google Map ♡</a> 
-                                    <p class="card-text"><u>כמה מילים על המקום:</u> ${someKnow.substring(0, 150) + "..."}</p> 
-                                    <p class="card-text">תגיות: ${sliceData(JSON.stringify(dataTable[i].c[3]))}</p> 
+                                    <p class="card-text mx-auto"><u>כמה מילים על המקום:</u> ${someKnow.substring(0, 150) + "..."}</p> 
                                     
-                                    <button type="button" class="btn btn-primary mx-auto " onclick="showProduct(${i})" data-toggle="modal" data-target="#exampleModal">נשמע דייט מעולה, תראו פרטים</button>
+                                    <button type="button" class="btn btn-primary mx-auto " onclick="showProduct(${i})" data-bs-toggle="modal" data-bs-target="#exampleModal">נשמע דייט מעולה, תראו פרטים</button>
     
                                 </div>
                                 
