@@ -215,21 +215,21 @@ p {
 }
 @media (max-width: 1600px) {
   .align-content-center,
-.justify-content-center {
+  .justify-content-center {
     align-items: center;
     justify-content: center;
   }
 }
 @media (max-width: 800px) {
   .align-content-center,
-.justify-content-center {
+  .justify-content-center {
     align-items: flex-start;
     justify-content: left;
   }
 }
 @media (max-width: 600px) {
   .align-content-center,
-.justify-content-center {
+  .justify-content-center {
     align-items: flex-start;
     justify-content: left;
   }
@@ -238,10 +238,25 @@ p {
 .borderFit {
   border: 3px solid #000;
   border-radius: 50px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+
+.myButton {
+  background-color: #fbee65;
+  border-radius: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Rubik;
+  font-size: 1.5rem;
+  padding: 16px 31px;
+  text-decoration: none;
+}
+
+.myButton:hover {
+  background-color: #fbee20;
+  color: #56445d;
 }
 
 .wrapper {
