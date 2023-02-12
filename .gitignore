@@ -11,3 +11,5 @@
 .vscode
 *.csss
 *.css.map
+package-lock.json
+package.json
